@@ -56,22 +56,27 @@ NLTK Library:
 However, there are some packages specific to some models which are as follows:
 
 Logistic Regression:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540234-2dd714d0-a639-4dd4-b410-26f51158e7b8.png)
 
 
 Random Forest Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540256-fbea1c84-79a6-4b50-a15b-8718c75fd07d.png)
 
 
 K – Nearest Neighbour:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540276-40a99350-ae25-4e52-b9b0-bd1a3c7d1aeb.png)
 
 
 Naive Bayesian Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540297-9d73aafc-9519-442f-87b2-de099615777f.png)
 
 
 Support Vector Machine:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540322-5cb83ca7-de40-4a51-a596-cfbb3a37fd8e.png)
 
  
@@ -90,12 +95,14 @@ Exploratory Data Analysis
 
 We would like to know the percentage of each review in the dataset – Positive, Negative and Neutral
 Graph 1
+
 ![image](https://user-images.githubusercontent.com/29891369/179540395-dff614e2-4f37-460a-b657-4e9ea52165b8.png)
 
  
 Then, we would like to know the Total number of tweet reviews for each Airline
 
 Graph 2
+
 ![image](https://user-images.githubusercontent.com/29891369/179540442-fbf6f20b-e987-498b-83ad-e9b87784bad0.png)
 
 
@@ -103,6 +110,7 @@ Graph 2
 
 Finally, let us have a look at the reviews divided categorically for each of those 6 Airlines
 Graph 3
+
 ![image](https://user-images.githubusercontent.com/29891369/179540464-a9747d1d-67bf-4a75-b13d-2d503f361aef.png)
 
 
@@ -112,14 +120,17 @@ Data Cleaning
 
 The datasets contain the tweets by multiple users which makes the dataset have slangs, punctuation marks and much more. Thus we need to do the following task to clean and prepare our data:
 1.	Remove Punctuation Marks
+2.	
 ![image](https://user-images.githubusercontent.com/29891369/179540499-8077a3e6-3b60-4b42-9239-9bee63d32376.png)
 
 
 2.	Tokenize the data – Separate the tweets into tokens (Tokens may be sentences or words)
+3.	
 ![image](https://user-images.githubusercontent.com/29891369/179540620-dc96ceec-ebb4-43d3-bd5a-36eae519b2dc.png)
 
  
 3.	Elimination of stopwords – Remove the commonly occurring words which convey almost no information about the data
+
 ![image](https://user-images.githubusercontent.com/29891369/179540658-1554104a-6b04-4134-9d67-4f7ace8d557a.png)
  
  
@@ -128,14 +139,17 @@ Pre-Process the Data
 Now we begin the pre-processing of the data by using NLP Syntax evaluation tasks
 
 1.	Stemming the data – Treat same words with different forms of tense, verb, and grammar as same words (reduces the corpus of the words) – word back to its root form
+
 ![image](https://user-images.githubusercontent.com/29891369/179540724-b6e02888-ce2c-4395-bd03-98979b10889b.png)
 
 
 2.	Lemmatizing the data – This helps us derive the Lemma – aka the canonical form of the word – base dictionary for of a word
+
 ![image](https://user-images.githubusercontent.com/29891369/179540757-d2576b36-a59b-4adc-9358-c4cf85eab906.png)
 
 
 3.	Now we will save the pre-processed data to a new file.
+
 ![image](https://user-images.githubusercontent.com/29891369/179540771-391f7f4c-9678-4701-89c7-5284098a440c.png)
 
  
@@ -147,6 +161,7 @@ IDF = Inverse Document Frequency
 
 It improves the contribution of words towards classification in the whole dictionary while its occurrence is less as compared to a particular document (here it is our CSV file) It helps us find the word in the document as well as will fetch the word from a dictionary and gives binary values (0 or 1) as output and then store it to an array. Often it is used to plot the relative frequency of the word. Generally, it is used for improving the search engine score. (This is implemented in each Model and not on the whole dataset at once)
 Here, the SciKit has TfIDVectorizer which allows us to convert the text to TF-IDF
+
 ![image](https://user-images.githubusercontent.com/29891369/179540805-7fcfa492-d77a-47f4-9d6d-7d565fd0b276.png)
 
 
@@ -162,28 +177,34 @@ Divide the dataset - Train set and Test set
 
 We will divide the dataset into parts Train set – 95% of the dataset
 Test set – 5 % of the dataset
+
 ![image](https://user-images.githubusercontent.com/29891369/179540835-97cad2c3-eaf2-4ce5-bb12-b56d700f29cf.png)
 
  
 Training the Model
 
 Logistic Regression:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540863-2cae27d8-f66b-48c7-88a2-30dbdd2192d6.png)
 
 
 Random Forest Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540884-05037c1d-c2ff-4218-a5ef-c70c66b8edb3.png)
 
 
 K – Nearest Neighbour:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540912-978524a5-0db4-4eca-a409-b828e588cb19.png)
 
  
 Now for K-values, first we randomly chose the value of K and then we tried to predict it by plotting the error rate for the K -Values for (1-40) to take the best K-value into consideration
+
 ![image](https://user-images.githubusercontent.com/29891369/179540953-03a73f33-7eea-4672-9a6c-ef60c57f3565.png)
 
 
 The graph looks like this:
+
 ![image](https://user-images.githubusercontent.com/29891369/179540995-c8a1c6ee-84c6-41ff-b891-0af05a3f6b16.png)
 
 
@@ -192,36 +213,44 @@ The graph looks like this:
 The lowest error rate was for value K = 4 from the graph, thus that is used in the above-shown code to train the model
  
 Naive Bayesian Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541037-1cf0bdc4-2e20-4223-afef-b0ab1ee0ae2a.png)
 
 
 Support Vector Machine:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541059-14072502-287f-4e84-acb2-ca6fa1fbf1da.png)
 
  
 Output and Accuracy of the Models
 
 Logistic Regression:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541108-693916b8-9f17-444d-9742-cfccc172862f.png)
 
 
 Random Forest Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541144-4127bea5-13e7-49a8-acf3-0e4b412c8a14.png)
 
 
 K – Nearest Neighbour:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541212-ece9cc19-5569-4877-b059-da9853178722.png)
 
 
 Naive Bayesian Classifier:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541233-7a00992f-8de4-48e2-86a6-44c5243b01a5.png)
 
  
 Support Vector Machine:
+
 ![image](https://user-images.githubusercontent.com/29891369/179541255-54834b2f-5f4b-4875-9e5f-d91cb8f10cdf.png)
 
 
 Comparison of the Accuracy of All Models
+
 ![image](https://user-images.githubusercontent.com/29891369/179541764-9968afcd-a94a-4bc1-b6ac-104acfa58ac9.png)
 
 
